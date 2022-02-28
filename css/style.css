@@ -350,35 +350,35 @@ template {
 
 @font-face {
   font-family: 'Nekst';
-  src: url("../Nekst-Regular.woff2") format("woff2"), url("../Nekst-Regular.woff") format("woff");
+  src: url("../fonts/Nekst-Regular.woff2") format("woff2"), url("../fonts/Nekst-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nekst';
-  src: url("../Nekst-Black.woff2") format("woff2"), url("../Nekst-Black.woff") format("woff");
+  src: url("../fonts/Nekst-Black.woff2") format("woff2"), url("../fonts/Nekst-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nekst';
-  src: url("../Nekst-Light.woff2") format("woff2"), url("../Nekst-Light.woff") format("woff");
+  src: url("../fonts/Nekst-Light.woff2") format("woff2"), url("../fonts/Nekst-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Verdana';
-  src: url("../Verdana.woff2") format("woff2"), url("../Verdana.woff") format("woff");
+  src: url("../fonts/Verdana.woff2") format("woff2"), url("../fonts/Verdana.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Verdana';
-  src: url("../Verdana-Bold.woff2") format("woff2"), url("../Verdana-Bold.woff") format("woff");
+  src: url("../fonts/Verdana-Bold.woff2") format("woff2"), url("../fonts/Verdana-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -405,10 +405,48 @@ ul {
   list-style: none;
 }
 
+h1 {
+  margin: 0;
+  font-family: 'Nekst', sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+  font-family: 'Nekst', sans-serif;
+}
+
 .container {
+  background-color: #ffffff;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.button {
+  background: #0588c6;
+  background: linear-gradient(135deg, #0588c6 3%, #04dbf3 63%, #04bae1 96%, #0588c6 100%);
+  font-family: 'Nekst', sans-serif;
+  border-radius: 30px;
+  width: 292px;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: red;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 33px;
 }
 
 .header-wrapper {
@@ -450,5 +488,46 @@ ul {
 .header-social_icon {
   width: 37px;
   height: 37px;
+}
+
+.main-wrapper {
+  padding-top: 115px;
+  padding-left: 120px;
+  padding-bottom: 160px;
+  background-image: url("../img/main_bg.png");
+}
+
+.main-subtitle {
+  margin-bottom: 45px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #213385;
+}
+
+.main-title {
+  margin-bottom: 40px;
+  width: 535px;
+  font-size: 47px;
+  line-height: 52px;
+  color: #213385;
+}
+
+.main-text {
+  width: 443px;
+  margin-bottom: 44px;
+  padding-left: 6px;
+  font-size: 19px;
+  line-height: 28px;
+}
+
+.main-text--b {
+  font-weight: bold;
+  margin-bottom: 38px;
+}
+
+.main-button {
+  margin-left: 10px;
 }
 /*# sourceMappingURL=style.css.map */
