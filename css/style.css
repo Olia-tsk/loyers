@@ -463,12 +463,16 @@ h3 {
   font-size: 33px;
 }
 
+.icon {
+  fill: #ffffff;
+}
+
 .header-wrapper {
   padding-left: 70px;
   padding-right: 20px;
   padding-top: 37px;
   padding-bottom: 27px;
-  background-color: #38449c;
+  background: radial-gradient(circle farthest-side at top center, #5869D0 0%, #38449C 80%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -723,5 +727,75 @@ h3 {
   margin: 0;
   margin-bottom: 30px;
   font-size: 26px;
+}
+
+.footer-wrapper {
+  padding-top: 86px;
+  padding-left: 95px;
+  padding-bottom: 100px;
+  background-color: #4d66cb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-media {
+  margin-right: 203px;
+}
+
+.footer-media_logo {
+  width: 482px;
+  margin-bottom: 104px;
+  margin-top: 10px;
+}
+
+.footer-media_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 330px;
+}
+
+.footer-media_icon {
+  width: 64px;
+  height: 64px;
+}
+
+.footer-contacts {
+  color: #ffffff;
+}
+
+.footer-contacts_qw {
+  margin: 0;
+  font-family: 'Nekst', sans-serif;
+  font-size: 57px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer-contacts_call {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 29px;
+}
+
+.footer-contacts_phone {
+  color: #ffffff;
+  font-size: 29px;
+}
+
+.footer-contacts_write {
+  margin: 0;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  font-size: 29px;
+}
+
+.footer-contacts_email {
+  font-size: 29px;
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
