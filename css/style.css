@@ -1420,6 +1420,11 @@ h3 {
   .footer-contacts_email {
     font-size: 25px;
   }
+  .modal-window {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1632,6 +1637,15 @@ h3 {
   .footer-contacts_email {
     font-size: 21px;
   }
+  .modal-header {
+    margin-bottom: 40px;
+  }
+  .modal-form input {
+    font-size: 21px;
+  }
+  .modal-form_agree:last-of-type {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 735px) {
@@ -1806,6 +1820,19 @@ h3 {
   .footer-contacts_email {
     font-size: 16px;
   }
+  .modal-form_group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal-form_item {
+    width: 100%;
+    margin-bottom: 27px;
+  }
+  .modal-form_item:last-child {
+    margin-bottom: 0;
+  }
   .button {
     height: 56px;
     width: 225px;
@@ -1936,6 +1963,16 @@ h3 {
   .footer-contacts_email {
     font-size: 14px;
   }
+  .modal-header {
+    margin-bottom: 30px;
+  }
+  .modal-form input {
+    font-size: 18px;
+  }
+  .modal-button {
+    height: 44px;
+    font-size: 16px;
+  }
   .button {
     height: 50px;
     width: 200px;
@@ -2007,6 +2044,23 @@ h3 {
   }
   .footer-media_logo {
     width: 85%;
+  }
+  .modal-window {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 90%;
+  }
+  .modal-header {
+    font-size: 21px;
+  }
+  .modal-form input {
+    font-size: 16px;
+  }
+  .modal-form_agree {
+    margin-bottom: 20px;
+  }
+  .modal-form_agree-lebel {
+    font-size: 14px;
   }
 }
 
@@ -2117,6 +2171,36 @@ h3 {
   }
   .footer-contacts_email {
     font-size: 12px;
+  }
+  .modal-header {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .modal-form_field {
+    margin-bottom: 20px;
+  }
+  .modal-form_group {
+    margin-bottom: 20px;
+  }
+  .modal-form_item {
+    margin-bottom: 20px;
+  }
+  .modal-form input {
+    font-size: 14px;
+  }
+  .modal-form_agree {
+    margin-bottom: 20px;
+  }
+  .modal-form_agree-lebel {
+    font-size: 12px;
+  }
+  .modal-form_agree:last-of-type {
+    margin-bottom: 30px;
+  }
+  .modal-button {
+    height: 36px;
+    width: 140px;
+    font-size: 14px;
   }
   .button {
     height: 39px;
