@@ -527,12 +527,14 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   width: 50%;
   height: 100vh;
   background-color: #38449C;
+  z-index: 5;
 }
 
 .header-mobile_menu {
