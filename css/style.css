@@ -964,6 +964,41 @@ h3 {
     margin-right: 0;
     width: 41%;
   }
+  .footer-wrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer-media {
+    margin: 0;
+    width: 50%;
+  }
+  .footer-media_logo {
+    width: 90%;
+  }
+  .footer-contacts {
+    width: 45%;
+  }
+  .footer-contacts_numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer-contacts_phone {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  .footer-contacts_write {
+    margin: 0;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 1350px) {
@@ -1035,6 +1070,40 @@ h3 {
   .announcement-info_name {
     font-size: 39px;
   }
+  .footer-media {
+    width: 47%;
+  }
+  .footer-media_social {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer-media_link {
+    margin-right: 35px;
+  }
+  .footer-media_icon {
+    width: 55px;
+    height: 55px;
+  }
+  .footer-contacts {
+    width: 49%;
+  }
+  .footer-contacts_qw {
+    font-size: 52px;
+  }
+  .footer-contacts_call {
+    font-size: 27px;
+  }
+  .footer-contacts_phone {
+    font-size: 27px;
+  }
+  .footer-contacts_write {
+    font-size: 27px;
+  }
+  .footer-contacts_email {
+    font-size: 27px;
+  }
   .button {
     width: 250px;
     font-size: 25px;
@@ -1105,6 +1174,33 @@ h3 {
   .announcement-info_text {
     margin-bottom: 25px;
     font-size: 21px;
+  }
+  .footer-wrapper {
+    padding-top: 60px;
+    padding-right: 65px;
+    padding-left: 65px;
+  }
+  .footer-media {
+    width: 49%;
+  }
+  .footer-contacts {
+    width: 42%;
+  }
+  .footer-contacts_qw {
+    margin-bottom: 10px;
+    font-size: 42px;
+  }
+  .footer-contacts_call {
+    font-size: 25px;
+  }
+  .footer-contacts_phone {
+    font-size: 25px;
+  }
+  .footer-contacts_write {
+    font-size: 25px;
+  }
+  .footer-contacts_email {
+    font-size: 25px;
   }
 }
 
@@ -1190,6 +1286,34 @@ h3 {
   .announcement-info_text {
     font-size: 18px;
   }
+  .footer-media {
+    width: 50%;
+  }
+  .footer-media_logo {
+    margin-bottom: 60px;
+  }
+  .footer-media_icon {
+    width: 50px;
+    height: 50px;
+  }
+  .footer-contacts {
+    width: 40%;
+  }
+  .footer-contacts_qw {
+    font-size: 34px;
+  }
+  .footer-contacts_call {
+    font-size: 23px;
+  }
+  .footer-contacts_phone {
+    font-size: 23px;
+  }
+  .footer-contacts_write {
+    font-size: 23px;
+  }
+  .footer-contacts_email {
+    font-size: 23px;
+  }
   .button {
     height: 59px;
     width: 240px;
@@ -1266,6 +1390,30 @@ h3 {
   .announcement-info {
     width: 60%;
   }
+  .footer-wrapper {
+    padding-top: 55px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 85px;
+  }
+  .footer-contacts {
+    width: 38%;
+  }
+  .footer-contacts_qw {
+    font-size: 30px;
+  }
+  .footer-contacts_call {
+    font-size: 21px;
+  }
+  .footer-contacts_phone {
+    font-size: 21px;
+  }
+  .footer-contacts_write {
+    font-size: 21px;
+  }
+  .footer-contacts_email {
+    font-size: 21px;
+  }
 }
 
 @media (max-width: 735px) {
@@ -1310,6 +1458,33 @@ h3 {
   }
   .announcement-info_name {
     font-size: 29px;
+  }
+  .footer-wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 50px;
+  }
+  .footer-media_logo {
+    margin-bottom: 45px;
+  }
+  .footer-media_icon {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-contacts_qw {
+    font-size: 26px;
+  }
+  .footer-contacts_call {
+    font-size: 18px;
+  }
+  .footer-contacts_phone {
+    font-size: 18px;
+  }
+  .footer-contacts_write {
+    font-size: 18px;
+  }
+  .footer-contacts_email {
+    font-size: 18px;
   }
 }
 
@@ -1393,6 +1568,24 @@ h3 {
     font-size: 26px;
   }
   .announcement-info_text {
+    font-size: 16px;
+  }
+  .footer-contacts {
+    width: 39%;
+  }
+  .footer-contacts_qw {
+    font-size: 24px;
+  }
+  .footer-contacts_call {
+    font-size: 16px;
+  }
+  .footer-contacts_phone {
+    font-size: 16px;
+  }
+  .footer-contacts_write {
+    font-size: 16px;
+  }
+  .footer-contacts_email {
     font-size: 16px;
   }
   .button {
@@ -1481,6 +1674,50 @@ h3 {
     width: 100%;
     text-align: center;
   }
+  .footer-wrapper {
+    padding-top: 45px;
+    padding-bottom: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-media {
+    width: 100%;
+  }
+  .footer-media_logo {
+    margin: 0;
+    margin-bottom: 25px;
+    width: 70%;
+  }
+  .footer-media_social {
+    margin-bottom: 20px;
+  }
+  .footer-media_link {
+    margin-right: 25px;
+  }
+  .footer-media_icon {
+    width: 35px;
+    height: 35px;
+  }
+  .footer-contacts {
+    width: 100%;
+  }
+  .footer-contacts_qw {
+    font-size: 22px;
+  }
+  .footer-contacts_call {
+    font-size: 14px;
+  }
+  .footer-contacts_phone {
+    font-size: 14px;
+  }
+  .footer-contacts_write {
+    font-size: 14px;
+  }
+  .footer-contacts_email {
+    font-size: 14px;
+  }
   .button {
     height: 50px;
     width: 200px;
@@ -1529,7 +1766,7 @@ h3 {
     font-size: 16px;
   }
   .announcement-wrapper {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
   .announcement-info_date {
     font-size: 26px;
@@ -1549,6 +1786,9 @@ h3 {
   .announcement-info_text {
     font-size: 14px;
     margin-bottom: 15px;
+  }
+  .footer-media_logo {
+    width: 85%;
   }
 }
 
@@ -1632,6 +1872,32 @@ h3 {
     font-size: 19px;
   }
   .announcement-info_text {
+    font-size: 12px;
+  }
+  .footer-media_logo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-media_social {
+    margin-bottom: 15px;
+  }
+  .footer-media_icon {
+    width: 30px;
+    height: 30px;
+  }
+  .footer-contacts_qw {
+    font-size: 18px;
+  }
+  .footer-contacts_call {
+    font-size: 12px;
+  }
+  .footer-contacts_phone {
+    font-size: 12px;
+  }
+  .footer-contacts_write {
+    font-size: 12px;
+  }
+  .footer-contacts_email {
     font-size: 12px;
   }
   .button {
