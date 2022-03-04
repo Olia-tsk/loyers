@@ -88,24 +88,89 @@ $(document).ready(function () {
   let phoneInput = $("input[name=tel]");
   phoneInput.mask("+7 (000) 000-00-00");
 
+  // Валидация форм
+  $(".modal-form").each(function () {
+    $(this).validate({
+      rules: {
+        tel: {
+          required: true,
+          minlength: 18,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+      },
+
+      messages: {
+        full_name: {
+          required: "Укажите Ваше имя",
+          minlength: "Имя должно быть длиннее 1 символа",
+        },
+        tel: {
+          required: "Укажите Ваш номер телефона",
+          minlength: jQuery.validator.format("Формат +7 (999) 999-99-99"),
+        },
+        email: {
+          required: "Укажите почту, чтобы мы могли связаться с Вами",
+          email: "Формат должен быть email@domain.ru",
+        },
+        confidentiality: {
+          required: "Это поле является обязательным",
+        },
+        link: {
+          required: "Это поле является обязательным",
+        },
+      },
+    });
+  });
+
   // замена данных в модальном окне после отправки
   $("#landingufw").on("submit", function (e) {
     e.preventDefault();
-    $.ajax({
-      url: "/send.php",
-      method: "post",
-      data: $("#landingufw").serialize(),
-    }).done(function (response) {
-      $("#landingufw")
-        .parent()
-        .append(
-          "<div class='response' style='text-align: center'>" +
-            response +
-            "</div>"
-        );
-      $("#landingufw").fadeOut(400, function () {
-        $("#landingufw").parent().find(".response").fadeIn();
+    if ($("#landingufw").valid()) {
+      $.ajax({
+        url: "/send.php",
+        method: "post",
+        data: $("#landingufw").serialize(),
+      }).done(function (response) {
+        $("#landingufw")
+          .parent()
+          .append(
+            "<div class='response' style='text-align: center'>" +
+              response +
+              "</div>"
+          );
+        $(".modal-header").addClass("hide");
+        $("#landingufw").fadeOut(400, function () {
+          $("#landingufw").parent().find(".response").fadeIn();
+        });
       });
-    });
+    }
   });
+
+  // $("#landingufw").on("submit", function (e) {
+  //   e.preventDefault();
+  //   if ($("#landingufw").valid()) {
+  //     $.ajax({
+  //       url: "/send.php",
+  //       method: "post",
+  //       data: $("#landingufw").serialize(),
+  //     }).done(function (response) {
+  //       $("#landingufw")
+  //         .parent()
+  //         .append(
+  //           "<div class='response' style='text-align: center'>" +
+  //             response +
+  //             "</div>"
+  //         );
+  //         $(".modal-header").addClass("hide");
+  //       $("#landingufw").fadeOut(400, function () {
+  //         $("#landingufw").parent().find(".response").fadeIn();
+  //       });
+
+  //   }
+
+  //   });
+  // });
 });
