@@ -1,18 +1,21 @@
 $(document).ready(function () {
   // Активируем бургер
   var burger = document.querySelector(".burger");
-  var close = document.querySelector(".icon-close");
+  var mobileMenuClose = document.querySelector(".icon-close");
+  var mobileMenu = document.querySelector(".header-mobile");
 
   burger.addEventListener("click", function () {
     document
       .querySelector(".header-mobile")
       .classList.add("header-mobile--visible");
+    body.addClass("overflow");
   });
 
-  close.addEventListener("click", function () {
+  mobileMenuClose.addEventListener("click", function () {
     document
       .querySelector(".header-mobile")
       .classList.remove("header-mobile--visible");
+    body.removeClass("overflow");
   });
 
   // модальное окно
@@ -59,4 +62,23 @@ $(document).ready(function () {
 
   modalButton.on("click", openModal);
   modalCloseBtn.on("click", closeModal);
+
+  // кнопка прокрутки в начало страницы
+  $(function () {
+    // scroll to top
+    $(".to-top").click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 500);
+      return false;
+    });
+
+    //show to-top button
+    $(document).scroll(function () {
+      var y = $(this).scrollTop();
+      if (y > 900) {
+        $(".to-top").addClass("to-top--visible");
+      } else {
+        $(".to-top").removeClass("to-top--visible");
+      }
+    });
+  });
 });
