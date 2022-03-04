@@ -27,11 +27,13 @@ $(document).ready(function () {
 
   // закрыть модальное окно на esc
   $(document).on("keydown", function (e) {
-    if (e.keyCode == 27) var modalOverlay = $(".overlay");
-    var modalWindow = $(".modal");
-    modalOverlay.removeClass("overlay--show");
-    modalWindow.removeClass("modal--active");
-    body.removeClass("overflow");
+    if (e.keyCode == 27) {
+      var modalOverlay = $(".overlay");
+      var modalWindow = $(".modal");
+      modalOverlay.removeClass("overlay--show");
+      modalWindow.removeClass("modal--active");
+      body.removeClass("overflow");
+    }
   });
 
   // закрыть модальное окно по щелчку вне окна
@@ -79,6 +81,31 @@ $(document).ready(function () {
       } else {
         $(".to-top").removeClass("to-top--visible");
       }
+    });
+  });
+
+  // маска для формы с номером телефона
+  let phoneInput = $("input[name=tel]");
+  phoneInput.mask("+7 (000) 000-00-00");
+
+  // замена данных в модальном окне после отправки
+  $("#landingufw").on("submit", function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: "/send.php",
+      method: "post",
+      data: $("#landingufw").serialize(),
+    }).done(function (response) {
+      $("#landingufw")
+        .parent()
+        .append(
+          "<div class='response' style='text-align: center'>" +
+            response +
+            "</div>"
+        );
+      $("#landingufw").fadeOut(400, function () {
+        $("#landingufw").parent().find(".response").fadeIn();
+      });
     });
   });
 });

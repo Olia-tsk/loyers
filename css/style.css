@@ -465,6 +465,7 @@ h3 {
 
 .icon {
   fill: #ffffff;
+  border-radius: 50%;
 }
 
 .icon-close {
@@ -1244,7 +1245,7 @@ h3 {
     margin-bottom: 45px !important;
   }
   .header-logo {
-    width: 29%;
+    width: 28%;
   }
   .main-wrapper {
     padding-top: 90px;
