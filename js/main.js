@@ -148,29 +148,4 @@ $(document).ready(function () {
       });
     }
   });
-
-  // $("#landingufw").on("submit", function (e) {
-  //   e.preventDefault();
-  //   if ($("#landingufw").valid()) {
-  //     $.ajax({
-  //       url: "/send.php",
-  //       method: "post",
-  //       data: $("#landingufw").serialize(),
-  //     }).done(function (response) {
-  //       $("#landingufw")
-  //         .parent()
-  //         .append(
-  //           "<div class='response' style='text-align: center'>" +
-  //             response +
-  //             "</div>"
-  //         );
-  //         $(".modal-header").addClass("hide");
-  //       $("#landingufw").fadeOut(400, function () {
-  //         $("#landingufw").parent().find(".response").fadeIn();
-  //       });
-
-  //   }
-
-  //   });
-  // });
 });
