@@ -1,7 +1,7 @@
 <?php
-$name = $_POST['full_name'];
-$email = $_POST['email'];
-$tel = $_POST['tel'];
+$name = htmlspecialchars($_POST['full_name']);
+$email = htmlspecialchars($_POST['email']);
+$tel = htmlspecialchars($_POST['tel']);
 
 $data = [
     'REMOTE_ADDR' => isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['REMOTE_ADDR'] . "/" . $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'],
