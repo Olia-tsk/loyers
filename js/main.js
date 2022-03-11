@@ -1,29 +1,44 @@
 $(document).ready(function () {
-  // Активируем бургер
   var burger = document.querySelector(".burger");
-  var mobileMenuClose = document.querySelector(".icon-close");
   var mobileMenu = document.querySelector(".header-mobile");
-
-  burger.addEventListener("click", function () {
-    document
-      .querySelector(".header-mobile")
-      .classList.add("header-mobile--visible");
-    body.addClass("overflow");
-  });
-
-  mobileMenuClose.addEventListener("click", function () {
-    document
-      .querySelector(".header-mobile")
-      .classList.remove("header-mobile--visible");
-    body.removeClass("overflow");
-  });
-
-  // модальное окно
+  var mobileMenuClose = document.querySelector(".icon-close");
   var modalButton = $("[data-toggle=modal]");
   var modalCloseBtn = $(".modal-close");
   var modalWindow = $(".modal");
   var modalOverlay = $(".overlay");
+  var mainWrapper = document.querySelector(".main-wrapper");
   var body = $("body");
+
+  //открываем мобильное меню
+  burger.addEventListener("click", function () {
+    mobileMenu.classList.add("header-mobile--visible");
+    body.addClass("overflow");
+  });
+
+  //закрываем мобильное меню на крестик
+  mobileMenuClose.addEventListener("click", function () {
+    mobileMenu.classList.remove("header-mobile--visible");
+    body.removeClass("overflow");
+  });
+
+  //закрываем м.меню по клику вне меню
+  mainWrapper.addEventListener("click", function (e) {
+    if (mobileMenu.clientWidth > 0 && !modalButton.is(e.target)) {
+      mobileMenu.classList.remove("header-mobile--visible");
+      body.removeClass("overflow");
+    }
+  });
+
+  //закрываем м.меню при открывании модального окна
+  $(document).on("click", function (e) {
+    if (modalButton.is(e.target) && mobileMenu.clientWidth > 0) {
+      e.preventDefault();
+      mobileMenu.classList.remove("header-mobile--visible");
+      modalOverlay.addClass("overlay--show");
+      modalWindow.addClass("modal--active");
+      body.addClass("overflow");
+    }
+  });
 
   // закрыть модальное окно на esc
   $(document).on("keydown", function (e) {
@@ -49,7 +64,8 @@ $(document).ready(function () {
     }
   });
 
-  function openModal() {
+  function openModal(event) {
+    event.preventDefault();
     modalOverlay.addClass("overlay--show");
     modalWindow.addClass("modal--active");
     body.addClass("overflow");
@@ -130,17 +146,13 @@ $(document).ready(function () {
     e.preventDefault();
     if ($("#landingufw").valid()) {
       $.ajax({
-        url: "/send.php",
+        url: "php/send.php",
         method: "post",
         data: $("#landingufw").serialize(),
       }).done(function (response) {
         $("#landingufw")
           .parent()
-          .append(
-            "<div class='response' style='text-align: center'>" +
-              response +
-              "</div>"
-          );
+          .append("<div class='response'>" + response + "</div>");
         $(".modal-header").addClass("hide");
         $("#landingufw").fadeOut(400, function () {
           $("#landingufw").parent().find(".response").fadeIn();
